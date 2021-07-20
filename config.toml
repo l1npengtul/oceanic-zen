@@ -12,3 +12,4 @@ github = "barlog-m"
 twitter = "barlog_m"
 logo = "https://avatars.githubusercontent.com/u/35755164?v=4"
 subtitle = "Blog Subtitle"
+use_render = true
