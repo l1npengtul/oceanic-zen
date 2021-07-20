@@ -2,7 +2,7 @@
 
 {% block richembed %}
 <meta content="{{ config.title }} - {{ config.description }}" property="og:site_name">
-<meta content="{{ page.title }} - {{ config.base_url }}" property="og:title" />
+<meta content= "Index - {{ config.base_url }}" property="og:title" />
 {% if config.extra.subtitle %}
 <meta content="Posts about {{ page.title }}" property="og:description" />
 {% endif %}
@@ -10,7 +10,7 @@
 <meta content="index.png" property="og:image" />
 <meta content="1200" property="og:image:width" />
 <meta content="600" property="og:image:height" />
-<meta content="{{ page.title }}" property="og:image:alt" />
+<meta content="Index" property="og:image:alt" />
 {% endif %}
 
 {% if config.extra.use_render %}
@@ -23,9 +23,9 @@
 {% if config.twitter %} 
 <meta name="twitter:site" content="@{{ config.twitter }}" />
 {% endif %} 
-<meta name="twitter:title" content="{{ page.title }} - {{ config.base_url }}" />
+<meta name="twitter:title" content="Index - {{ config.base_url }}" />
 {% if config.extra.subtitle %}
-<meta name="twitter:description" content="{{ page.summary }}" />
+<meta name="twitter:description" content="Index" />
 {% endif %}
 
 {% endblock richembed %}
