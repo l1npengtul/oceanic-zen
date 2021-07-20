@@ -10,6 +10,10 @@
         {% endif %}
 
         <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+        
+        {%if config.extra.logo -%}
+        <link rel="shortcut icon" href="{{ config.extra.logo }}">
+        {% endif %}
 
         {% block css %}
             <link rel="stylesheet" href="{{ get_url(path="theme.css", trailing_slash=false) | safe }}">
@@ -22,11 +26,8 @@
         {% block header %}
             <header>
                 <div class="header-left">
-                    <img src="{{ config.logo }}" class="logo-img">
+                    <img src="{{ config.extra.logo }}" class="logo-img">
                     <a href="{{ config.base_url }}" class="logo">{{ config.title }}</a>
-                    <div>
-                        <p class="logo-subtitle">{{ config.subtitle }}</p> 
-                    </div>
                 </div>
                 <div class="header-right">
                     <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
@@ -53,9 +54,23 @@
                             </a>
                         </li>
                         {% endif %}
+                        {% if config.extra.navbar_items %}
+                        {% for nav in config.extra.navbar_items %} 
+                        <li class="nav">
+                            <a itemprop="url" href="{{ nav.url | replace(from='$BASE_URL', to=config.base_url) }}">
+                                <img class="icon" src="{{ nav.icon_url | replace(from='$BASE_URL', to=config.base_url) }}" alt="{{ nav.alt }}">
+                            </a>
+                        </li>
+                        {% endfor %}
+                        {% endif %}
                     </nav>
                 </div>
             </header>
+            {% if config.extra.subtitle %}
+            <div>
+                <p class="logo-subtitle">{{ config.extra.subtitle }}</p> 
+            </div>
+            {% endif %}
         {% endblock header %}
         {% block content %}
         <main>

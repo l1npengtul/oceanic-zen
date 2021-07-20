@@ -1,8 +1,6 @@
 base_url = "https://oceanic-zen.netlify.app/"
 title = "Blog name"
-logo = "https://avatars.githubusercontent.com/u/35755164?v=4"
 description = "Personal blog"
-subtitle = "Blog Subtitle"
 compile_sass = true
 highlight_code = true
 highlight_theme = "visual-studio-dark"
@@ -12,3 +10,5 @@ build_search_index = false
 author = "Barlog M."
 github = "barlog-m"
 twitter = "barlog_m"
+logo = "https://avatars.githubusercontent.com/u/35755164?v=4"
+subtitle = "Blog Subtitle"
