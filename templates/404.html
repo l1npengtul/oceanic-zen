@@ -5,7 +5,7 @@
 <meta content="{{ config.title }} - {{ config.base_url }}" property="og:title" />
 <meta content="404 Not Found" property="og:description" />
 {% if config.extra.use_render %}
-<meta content="{{ get_url(path="404.png" , trailing_slash=false  ) }}" property="og:image" />
+<meta content="./404.png" property="og:image" />
 <meta content="1200" property="og:image:width" />
 <meta content="600" property="og:image:height" />
 <meta content="404 Not Found" property="og:image:alt" />
@@ -13,7 +13,7 @@
 
 {% if config.extra.use_render %}
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-src" content="index.png"  />
+<meta name="twitter:image-src" content="./404.png"  />
 {% else %} 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image-src" content="{{ config.extra.logo }}"  />
