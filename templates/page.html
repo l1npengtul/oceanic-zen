@@ -7,7 +7,7 @@
 <meta content="{{ page.summary }}" property="og:description" />
 {% endif %}
 {% if config.extra.use_render %}
-<meta content="{{ config.base_url }}/{{ page.extra.link }}/{{ page.slug }}/index.png" property="og:image" />
+<meta content="{{ config.base_url }}/{{ page.extra.link }}/{{ page.slug }}/index.jpg" property="og:image" />
 <meta content="1200" property="og:image:width" />
 <meta content="600" property="og:image:height" />
 <meta content="{{ page.summary }}" property="og:image:alt" />
@@ -15,7 +15,7 @@
 
 {% if config.extra.use_render %}
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-src" content="{{ config.base_url }}/{{ page.extra.link }}/{{ page.slug }}/index.png"  />
+<meta name="twitter:image-src" content="{{ config.base_url }}/{{ page.extra.link }}/{{ page.slug }}/index.jpg"  />
 {% else %} 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image-src" content="{{ config.extra.logo }}"  />
