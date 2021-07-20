@@ -1,5 +1,35 @@
 {% extends "index.html" %}
 
+{% block richembed %}
+<meta content="{{ config.title }} - {{ config.description }}" property="og:site_name">
+<meta content="{{ page.title }} - {{ config.base_url }}" property="og:title" />
+{% if page.summary %}
+<meta content="{{ page.summary }}" property="og:description" />
+{% endif %}
+{% if page.embedimage %}
+<meta content="{{ page.embedimage }}" property="og:description" />
+{% else %}
+<meta content="{{ config.logo }}" property="og:description" />
+{% endif %}
+
+<meta name="twitter:card" content="summary">
+{% if config.twitter %} 
+<meta name="twitter:site" content="@{{ config.twitter }}" />
+{% endif %} 
+<meta name="twitter:title" content="{{ page.title }} - {{ config.base_url }}" />
+<meta name="twitter:description" content="{{ page.summary }}" />
+{% if page.embedimage %}
+<meta name="twitter:image" content="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg" />
+{% else %}
+<meta name="twitter:image" content="{{ config.logo }}"  />
+{% endif %}
+
+{% endblock richembed %}
+
+
+
+{% endblock richembed %}
+
 {% block main %}
 <article itemscope itemtype="http://schema.org/BlogPosting">
     <div itemprop="headline">
