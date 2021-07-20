@@ -5,9 +5,16 @@
     <div itemprop="headline">
         <h1>{{ page.title }}</h1>
         <div class="border"></div>
-        <time datetime="{{ page.date | date(format="%Y-%m-%d") }}" class="date" itemprop="datePublished">
-            {{ page.date | date(format="%d %b %Y") }}
+        <div>
+            <time datetime="{{ page.date | date(format="%Y-%m-%d") }}" class="date" itemprop="datePublished">
+                Written: {{ page.date | date(format="%d %b %Y") }}
+            </time>
+        </div>
+        {% if page.updated %} 
+        <time datetime="{{ page.date | date(format="%Y-%m-%d") }}" class="date" itemprop="dateUpdated">
+            Last Updated: {{ page.updated | date(format="%d %b %Y") }}
         </time>
+        {% endif %}
     </div>
     <div itemprop="articleBody">
         {{ page.content | safe }}
