@@ -4,8 +4,8 @@
 <meta content="{{ config.title }} - {{ config.description }}" property="og:site_name">
 <meta content="{{ config.title }} - {{ config.base_url }}" property="og:title" />
 <meta content="404 Not Found" property="og:description" />
-{% if config.logo %}
-<meta content="{{ config.logo }}" property="og:description" />
+{% if config.extra.logo %}
+<meta content="{{ config.extra.logo }}" property="og:description" />
 {% endif %}
 
 <meta name="twitter:card" content="summary">
@@ -14,8 +14,8 @@
 {% endif %} 
 <meta name="twitter:title" content="{{ config.title }} - {{ config.base_url }}" />
 <meta content="404 Not Found" property="og:description" />
-{% if config.logo %}
-<meta name="twitter:image" content="{{ config.logo }}"  />
+{% if config.extra.logo %}
+<meta name="twitter:image" content="{{ config.extra.logo }}"  />
 {% endif %}
 
 {% endblock richembed %}

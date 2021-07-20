@@ -9,7 +9,7 @@
 {% if page.embedimage %}
 <meta content="{{ page.embedimage }}" property="og:description" />
 {% else %}
-<meta content="{{ config.logo }}" property="og:description" />
+<meta content="{{ config.extra.logo }}" property="og:description" />
 {% endif %}
 
 <meta name="twitter:card" content="summary">
@@ -19,9 +19,9 @@
 <meta name="twitter:title" content="{{ page.title }} - {{ config.base_url }}" />
 <meta name="twitter:description" content="{{ page.summary }}" />
 {% if page.embedimage %}
-<meta name="twitter:image" content="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg" />
+<meta name="twitter:image" content="{{ page.embedimage }}" />
 {% else %}
-<meta name="twitter:image" content="{{ config.logo }}"  />
+<meta name="twitter:image" content="{{ config.extra.logo }}"  />
 {% endif %}
 
 {% endblock richembed %}
