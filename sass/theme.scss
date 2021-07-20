@@ -1,15 +1,15 @@
 @import "colors";
 
 @font-face {
-    font-family: 'Iosevka';
-    src: url("/fonts/iosevka-regular.woff2"),
-        url("/fonts/iosevka-italic.woff2"),
-        url("/fonts/iosevka-bold.woff2"),
-        url("/fonts/iosevka-bolditalic.woff2");
+    font-family: 'JetBrainsMono';
+    src: url("/fonts/JetBrainsMono-Light.woff2"),
+        url("/fonts/JetBrainsMono-LightItalic.woff2"),
+        url("/fonts/JetBrainsMono-Bold.woff2"),
+        url("/fonts/JetBrainsMono-BoldItalic.woff2");
 }
 
-$font: "Iosevka", sans-serif;
-$font-mono:  "Iosevka", monospace;
+$font: "JetBrainsMono", sans-serif;
+$font-mono:  "JetBrainsMono", monospace;
 $padding: 8px;
 
 body {
