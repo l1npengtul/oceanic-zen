@@ -22,7 +22,11 @@
         {% block header %}
             <header>
                 <div class="header-left">
+                    <img src="{{ config.logo }}" class="logo-img">
                     <a href="{{ config.base_url }}" class="logo">{{ config.title }}</a>
+                    <div>
+                        <p class="logo-subtitle">{{ config.subtitle }}</p> 
+                    </div>
                 </div>
                 <div class="header-right">
                     <nav itemscope itemtype="http://schema.org/SiteNavigationElement">

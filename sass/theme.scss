@@ -138,6 +138,18 @@ p > code {
     font-weight: bold;
 }
 
+.logo-img {
+    display: inline;
+    margin: 0 5px;
+    width: 64px;
+    height: 64px;
+}
+
+.logo-subtitle {
+    font-size: 14px;
+    font-weight: normal;
+}
+
 .date {
     color: $gray_light;
     font-size: 14px;
