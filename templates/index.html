@@ -97,9 +97,9 @@
                 {% for s in index.subsections %}
                     {% set subsection = get_section(path=s) %}
                     <li>
-                    <a href="{{ subsection.permalink | safe}}">
+                    <b><a href="{{ subsection.permalink | safe}}">
                         {{ subsection.title }}
-                    </a>
+                    </a></b>
                     </li>
                     {% if subsection.pages %}
                     <ul>
