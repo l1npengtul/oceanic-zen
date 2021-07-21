@@ -4,10 +4,12 @@
 <meta content="{{ config.title }} - {{ config.description }}" property="og:site_name">
 <meta content="{{ page.title }} - {{ config.base_url }}" property="og:title" />
 {% if page.summary %}
+<meta name="twitter:description" content="{{ page.summary }}" />
 <meta content="{{ page.summary }}" property="og:description" />
 {% endif %}
 {% if config.extra.use_render %}
 <meta content="{{ config.base_url }}/{{ page.extra.link }}/{{ page.slug }}/index.jpg" property="og:image" />
+<meta content="{{ config.base_url }}/{{ page.extra.link }}/{{ page.slug }}/index" property="og:url" />
 <meta content="1200" property="og:image:width" />
 <meta content="600" property="og:image:height" />
 <meta content="{{ page.summary }}" property="og:image:alt" />
@@ -24,7 +26,6 @@
 <meta name="twitter:site" content="@{{ config.twitter }}" />
 {% endif %} 
 <meta name="twitter:title" content="{{ page.title }} - {{ config.base_url }}" />
-<meta name="twitter:description" content="{{ page.summary }}" />
 
 {% endblock richembed %}
 
