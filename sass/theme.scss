@@ -179,7 +179,9 @@ p > code {
 
 .section-link {
     font-weight: bold;
-    text-underline-position: auto;
+    text-underline-position: under;
+    text-decoration: underline;
+    text-decoration-color: #69c;
 }
 
 @media (max-width: 1200px) {
