@@ -177,6 +177,11 @@ p > code {
     width: 860px;
 }
 
+.section-link {
+    font-weight: bold;
+    text-underline-position: auto;
+}
+
 @media (max-width: 1200px) {
     .content {
         margin-left: 1em;
